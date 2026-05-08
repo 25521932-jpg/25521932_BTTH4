@@ -1,0 +1,60 @@
+#include "CTime.h"
+#include <iostream>
+#include <thread>
+#include <chrono>
+
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
+using namespace std;
+
+void gotoxy(int x, int y) {
+#ifdef _WIN32
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+#endif
+}
+
+int main() {
+    CTime t;
+
+    cin >> t;
+
+    cout << "\n===== TEST TOAN TU =====\n";
+
+    cout << "Thoi gian hien tai: " << t << endl;
+
+    cout << "Cong 5000 giay: " << t + 5000 << endl;
+
+    cout << "Tru 1000 giay: " << t - 1000 << endl;
+
+    cout << "++t: " << ++t << endl;
+
+    cout << "t++: " << t++ << endl;
+
+    cout << "Sau t++: " << t << endl;
+
+    cout << "--t: " << --t << endl;
+
+    cout << "t--: " << t-- << endl;
+
+    cout << "Sau t--: " << t << endl;
+
+    cout << "\n===== DONG HO GOC PHAI =====\n";
+
+    // Đồng hồ chạy thật
+    while (true) {
+        gotoxy(60, 2);
+
+        cout << t;
+
+        this_thread::sleep_for(chrono::seconds(1));
+
+        ++t;
+    }
+
+    return 0;
+}
