@@ -1,0 +1,43 @@
+#include <iostream>
+#include "CMatrix.h"
+
+using namespace std;
+
+int main() {
+
+    CMatrix A, B;
+    CVector v;
+
+    cout << "===== NHAP MA TRAN A =====\n";
+    cin >> A;
+
+    cout << "\n===== NHAP MA TRAN B =====\n";
+    cin >> B;
+
+    cout << "\n===== NHAP VECTOR =====\n";
+    cin >> v;
+
+    cout << "\n===== MA TRAN A =====\n";
+    cout << A;
+
+    cout << "\n===== MA TRAN B =====\n";
+    cout << B;
+
+    // +
+    cout << "\n===== A + B =====\n";
+    cout << A + B;
+
+    // -
+    cout << "\n===== A - B =====\n";
+    cout << A - B;
+
+    // *
+    cout << "\n===== A * B =====\n";
+    cout << A * B;
+
+    // A * vector
+    cout << "\n===== A * VECTOR =====\n";
+    cout << A.multiplyVector(v) << endl;
+
+    return 0;
+}  
