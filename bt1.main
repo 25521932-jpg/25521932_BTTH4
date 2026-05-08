@@ -1,0 +1,36 @@
+#include <iostream>
+#include "SoPhuc.h"
+
+int main() {
+    // 1. Kiểm tra khởi tạo (Số thực là số phức đặc biệt)
+    SoPhuc r(10);
+    std::cout << "Test 1 - So thuc duoc coi la so phuc: " << r << std::endl;
+
+    // 2. Nhập dữ liệu
+    SoPhuc a, b;
+    std::cout << "\n--- Nhap so phuc a ---" << std::endl;
+    std::cin >> a;
+    std::cout << "--- Nhap so phuc b ---" << std::endl;
+    std::cin >> b;
+
+    // 3. Kiểm tra các phép toán
+    std::cout << "\n--- Ket qua cac phep tinh ---" << std::endl;
+    std::cout << "a + b = " << a + b << std::endl;
+    std::cout << "a - b = " << a - b << std::endl;
+    std::cout << "a * b = " << a * b << std::endl;
+    std::cout << "a / b = " << a / b << std::endl;
+
+    // 4. Kiểm tra so sánh
+    std::cout << "\n--- Kiem tra so sanh ---" << std::endl;
+    if (a == b) {
+        std::cout << "So a bang so b" << std::endl;
+    } else {
+        std::cout << "So a khac so b" << std::endl;
+    }
+
+    // 5. Test case mac dinh (Dua tren bang test case truoc do)
+    SoPhuc t1(4, 2), t2(3, -1);
+    std::cout << "\nTest Case dac biet: (4 + 2i) / (3 - i) = " << t1 / t2 << " (Ky vong: 1 + 1i)" << std::endl;
+
+    return 0;
+}
