@@ -1,0 +1,81 @@
+#include <iostream>
+#include <cmath>
+#include "CDate.h"
+
+using namespace std;
+
+int main() {
+
+    CDate d1, d2;
+
+    cout << "===== NHAP NGAY 1 =====\n";
+    cin >> d1;
+
+    cout << "\n===== NHAP NGAY 2 =====\n";
+    cin >> d2;
+
+    cout << "\n===== XUAT NGAY =====\n";
+    cout << "Ngay 1: " << d1 << endl;
+    cout << "Ngay 2: " << d2 << endl;
+
+    cout << "\n===== CONG TRU NGAY =====\n";
+
+    cout << "Ngay 1 + 30 ngay: "
+         << d1 + 30 << endl;
+
+    cout << "Ngay 1 - 15 ngay: "
+         << d1 - 15 << endl;
+
+    cout << "\n===== ++ -- =====\n";
+
+    cout << "++Ngay1: " << ++d1 << endl;
+
+    cout << "Ngay1++: " << d1++ << endl;
+
+    cout << "Sau Ngay1++: " << d1 << endl;
+
+    cout << "--Ngay1: " << --d1 << endl;
+
+    cout << "Ngay1--: " << d1-- << endl;
+
+    cout << "Sau Ngay1--: " << d1 << endl;
+
+    cout << "\n===== KHOANG CACH 2 NGAY =====\n";
+
+    long long distance = d1 - d2;
+
+    cout << "So ngay chenh lech: "
+         << distance << " ngay\n";
+
+    // =============================
+    // BAI TOAN LAI SUAT NGAN HANG
+    // =============================
+
+    cout << "\n===== TINH LAI SUAT NGAN HANG =====\n";
+
+    double money;
+    double rate;
+
+    cout << "Nhap so tien gui: ";
+    cin >> money;
+
+    cout << "Nhap lai suat nam (%): ";
+    cin >> rate;
+
+    long long days = d2 - d1;
+
+    double interest =
+        money * (rate / 100.0)
+        * days / 365.0;
+
+    cout << "\nSo ngay gui: "
+         << days << " ngay\n";
+
+    cout << "Tien lai: "
+         << interest << endl;
+
+    cout << "Tong tien nhan duoc: "
+         << money + interest << endl;
+
+    return 0;
+}
