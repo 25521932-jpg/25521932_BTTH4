@@ -1,0 +1,37 @@
+#include <iostream>
+#include "Polynomial.h"
+
+using namespace std;
+
+int main() {
+
+    Polynomial p1, p2;
+
+    cout << "Nhap da thuc thu 1\n";
+    cin >> p1;
+
+    cout << "\nNhap da thuc thu 2\n";
+    cin >> p2;
+
+    cout << "\nDa thuc 1: " << p1 << endl;
+    cout << "Da thuc 2: " << p2 << endl;
+
+    cout << "\nTong:\n";
+    cout << p1 + p2 << endl;
+
+    cout << "\nHieu:\n";
+    cout << p1 - p2 << endl;
+
+    cout << "\nTich:\n";
+    cout << p1 * p2 << endl;
+
+    double x;
+
+    cout << "\nNhap gia tri x: ";
+    cin >> x;
+
+    cout << "P1(" << x << ") = " << p1.evaluate(x) << endl;
+    cout << "P2(" << x << ") = " << p2.evaluate(x) << endl;
+
+    return 0;
+}
