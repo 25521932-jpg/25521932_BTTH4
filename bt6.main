@@ -1,0 +1,51 @@
+
+#include <iostream>
+#include "CVector.h"
+
+using namespace std;
+
+int main() {
+
+    CVector v1, v2;
+
+    cout << "Nhap vector thu 1\n";
+    cin >> v1;
+
+    cout << "\nNhap vector thu 2\n";
+    cin >> v2;
+
+    cout << "\nVector 1: " << v1 << endl;
+    cout << "Vector 2: " << v2 << endl;
+
+    // +
+    cout << "\nTong 2 vector:\n";
+    cout << v1 + v2 << endl;
+
+    // -
+    cout << "\nHieu 2 vector:\n";
+    cout << v1 - v2 << endl;
+
+    // *
+    double k;
+
+    cout << "\nNhap he so k: ";
+    cin >> k;
+
+    cout << "\nVector 1 * " << k << ":\n";
+    cout << v1 * k << endl;
+
+    // Dot product
+    cout << "\nTich vo huong:\n";
+    cout << v1.dot(v2) << endl;
+
+    // ==
+    cout << "\nSo sanh:\n";
+
+    if (v1 == v2)
+        cout << "Hai vector bang nhau\n";
+    else
+        cout << "Hai vector khac nhau\n";
+
+    return 0;
+}
+
