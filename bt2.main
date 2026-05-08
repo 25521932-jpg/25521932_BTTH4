@@ -1,0 +1,41 @@
+#include <iostream>
+#include "PhanSo.h"
+
+using namespace std;
+
+int main() {
+
+    // Test số nguyên là phân số đặc biệt
+    PhanSo a(5);
+
+    cout << "Phan so tu so nguyen 5: " << a << endl;
+
+    // Nhập
+    PhanSo p1, p2;
+
+    cout << "\nNhap phan so thu 1\n";
+    cin >> p1;
+
+    cout << "\nNhap phan so thu 2\n";
+    cin >> p2;
+
+    // Phép toán
+    cout << "\nTong: " << p1 + p2 << endl;
+    cout << "Hieu: " << p1 - p2 << endl;
+    cout << "Tich: " << p1 * p2 << endl;
+    cout << "Thuong: " << p1 / p2 << endl;
+
+    // So sánh
+    cout << "\nSo sanh\n";
+
+    if (p1 == p2)
+        cout << "p1 == p2\n";
+
+    if (p1 > p2)
+        cout << "p1 > p2\n";
+
+    if (p1 < p2)
+        cout << "p1 < p2\n";
+
+    return 0;
+}
